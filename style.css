@@ -1,0 +1,80 @@
+
+.display-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    width: 1270px;
+    height: 720px;
+    margin: 30px;
+    border: 2px solid black;
+    padding: 40px 0 40px 0;
+}
+.col {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 150px;
+    flex-wrap: wrap;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 1.2em;
+    color: white;
+    font-family: serif;
+    align-items: center;
+    justify-content: space-around;
+    margin: 2px;
+    flex-basis: 15px;
+    height: 100%;
+    flex-grow: 1;
+    flex-shrink: 1;
+ }
+ 
+#box-1a, #box-1b, #box-8b, 
+#box-15b, #box-22b, #box-8a, 
+#box-15a, #box-22a {
+    background-color: green;
+}
+#box-2a, #box-2b, #box-9a, #box-9b,
+#box-16a, #box-16b, #box-23a, #box-23b {
+    background-color: yellowgreen;
+}
+#box-3a, #box-3b,
+#box-10a, #box-10b,
+#box-17a, #box-17b,
+#box-24a, #box-24b {
+    background-color: red;
+    display: none;
+}
+#box-4a, #box-4b,
+#box-11a, #box-11b,
+#box-18a, #box-18b,
+#box-25a, #box-25b {
+    background-color: blue;
+}
+#box-5a, #box-5b,
+#box-12a, #box-12b,
+#box-19a, #box-19b {
+    background-color: teal;
+    display: none;
+}
+#box-6a, #box-6b,
+#box-13a, #box-13b,
+#box-20a, #box-20b {
+    background-color: orange;
+}
+#box-7a, #box-7b,
+#box-14a, #box-14b,
+#box-21a, #box-21b {
+    background-color: fuchsia;
+    display: none;
+}
+#total {
+    background-color: violet;
+}
+#form {
+    background-color: pink;
+}
