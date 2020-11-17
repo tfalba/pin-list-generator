@@ -33,7 +33,7 @@
     flex-shrink: 1;
  }
  
-#box-1a, #box-1b, #box-8b, 
+#box1, #box2, #box-8b, 
 #box-15b, #box-22b, #box-8a, 
 #box-15a, #box-22a {
     background-color: green;
@@ -45,14 +45,14 @@
 #box-3a, #box-3b,
 #box-10a, #box-10b,
 #box-17a, #box-17b,
-#box-24a, #box-24b {
+#box47, #box48 {
     background-color: red;
-    display: none;
 }
+
 #box-4a, #box-4b,
 #box-11a, #box-11b,
 #box-18a, #box-18b,
-#box-25a, #box-25b {
+#box49, #box50 {
     background-color: blue;
 }
 #box-5a, #box-5b,
@@ -77,4 +77,8 @@
 }
 #form {
     background-color: pink;
+}
+
+.hideme {
+    display: none;
 }
