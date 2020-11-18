@@ -46,11 +46,20 @@ form.addEventListener('submit', function (event) {
     studentArray1.push(i)
   }
 
-  const shifter = numberStudents.value/2
+  const students = parseInt(numberStudents.value, 10)
+  let totalStudents = 0
+  if (students % 2 === 0) {
+    totalStudents = students
+  } else {
+    totalStudents = students + 1
+    studentArray1.push(50)
+  }
+
+  const shifter = totalStudents/2
   for (let i = 1; i < studentArrays.length; i++) {
     // studentArrays[i].push(studentArrays[i - 1][studentArrays[i - 1].length - 1])
     studentArrays[i].push(studentArrays[0][0])
-    for (let j = 1; j < (numberStudents.value); j++) {
+    for (let j = 1; j < (totalStudents); j++) {
       if (j<shifter) {
         studentArrays[i].push(studentArrays[i - 1][j+shifter])
       }
@@ -58,25 +67,25 @@ form.addEventListener('submit', function (event) {
         studentArrays[i].push(studentArrays[i-1][j-shifter+1])
       }
 
-      console.log(studentArrays)
-      console.log(studentArrays[i])
-      console.log(studentArrays[i][j])
-      console.log(i)
+      // console.log(studentArrays)
+      // console.log(studentArrays[i])
+      // console.log(studentArrays[i][j])
+      // console.log(i)
     }
   }
 
-  for (let i = 0; i < numberStudents.value; i++) {
+  for (let i = 0; i < totalStudents; i++) {
     boxes[i].innerHTML = studentArrays[round.value-1][i]
     boxes[i].classList.remove('hideme')
   }
-  for (let i = numberStudents.value; i < 50; i++) {
+  for (let i = totalStudents; i < 50; i++) {
     boxes[i].classList.add('hideme')
   }
 
-  if (round.value === "1" | round.value === "6" | round.value==="11" | round.value==="16") {
+  if (round.value === '1' | round.value === '6' | round.value==='11' | round.value==='16') {
     display.classList.add('round1')
   }
-  if (round.value === "2" | round.value === "7" | round.value==="12" | round.value==="17") {
+  if (round.value === '2' | round.value === '7' | round.value==='12' | round.value==='17') {
     display.classList.add('round2')
   }
   sideBar.innerHTML = `ROUND ${round.value}`
