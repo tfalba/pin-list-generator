@@ -2,51 +2,51 @@ const totalField = document.querySelector('#total')
 const numberStudents = document.querySelector('#total-students')
 const round = document.querySelector('#round')
 const form = document.querySelector('#form')
+const display = document.querySelector('#display')
+const sideBar = document.querySelector('#side-bar')
 
 form.addEventListener('submit', function (event) {
   event.preventDefault()
 
-let studentArrayStart = []
-let studentArray1 = []
-let studentArray2 = []
-let studentArray3 = []
-let studentArray4 = []
-let studentArray5 = []
-let studentArray6 = []
-let studentArray7 = []
-let studentArray8 = []
-let studentArray9 = []
-let studentArray10 = []
-let studentArray11 = []
-let studentArray12 = []
-let studentArray13 = []
-let studentArray14 = []
-let studentArray15 = []
-let studentArray16 = []
-let studentArray17 = []
-let studentArray18 = []
-let studentArray19 = []
-let studentArray20 = []
-let studentArray21 = []
-let studentArray22 = []
-let studentArray23 = []
-let studentArray24 = []
-let studentArray25 = []
-let studentArray26 = []
-let studentArray27 = []
-let studentArray28 = []
-let studentArrays = [studentArray1, studentArray2, studentArray3, studentArray4, studentArray5, studentArray6, studentArray7,
-studentArray8, studentArray9, studentArray10, studentArray11, studentArray12, studentArray13, studentArray14, studentArray15,
-studentArray16, studentArray17, studentArray18, studentArray19, studentArray20, studentArray21, studentArray22, studentArray23,
-studentArray24, studentArray25, studentArray26, studentArray27, studentArray28]
+  let studentArrayStart = []
+  const studentArray1 = []
+  let studentArray2 = []
+  let studentArray3 = []
+  let studentArray4 = []
+  let studentArray5 = []
+  let studentArray6 = []
+  let studentArray7 = []
+  let studentArray8 = []
+  let studentArray9 = []
+  let studentArray10 = []
+  let studentArray11 = []
+  let studentArray12 = []
+  let studentArray13 = []
+  let studentArray14 = []
+  let studentArray15 = []
+  let studentArray16 = []
+  let studentArray17 = []
+  let studentArray18 = []
+  let studentArray19 = []
+  let studentArray20 = []
+  let studentArray21 = []
+  let studentArray22 = []
+  let studentArray23 = []
+  let studentArray24 = []
+  let studentArray25 = []
+  let studentArray26 = []
+  let studentArray27 = []
+  let studentArray28 = []
+  let studentArrays = [studentArray1, studentArray2, studentArray3, studentArray4, studentArray5, studentArray6, studentArray7,
+    studentArray8, studentArray9, studentArray10, studentArray11, studentArray12, studentArray13, studentArray14, studentArray15,
+    studentArray16, studentArray17, studentArray18, studentArray19, studentArray20, studentArray21, studentArray22, studentArray23,
+    studentArray24, studentArray25, studentArray26, studentArray27, studentArray28]
 
   for (let i = 1; i <= (numberStudents.value); i++) {
     studentArray1.push(i)
-    console.log(studentArrayStart)
-    console.log(i)
   }
 
-let shifter = numberStudents.value/2
+  const shifter = numberStudents.value/2
   for (let i = 1; i < studentArrays.length; i++) {
     // studentArrays[i].push(studentArrays[i - 1][studentArrays[i - 1].length - 1])
     studentArrays[i].push(studentArrays[0][0])
@@ -65,25 +65,25 @@ let shifter = numberStudents.value/2
     }
   }
 
-  /* ----------------------- Add an extra box to the html for which round is desired. Make this ----------------------- */
-
-  //   totalField.innerHTML = studentArray + studentArray2
-
-  totalField.innerHTML = `[${studentArray1}] Round2: [${studentArray2}] Round3: [${studentArray3}]`
-  /* ----------------------------- define round as a field in the form let i = round.value ---------------------------- */
-
   for (let i = 0; i < numberStudents.value; i++) {
     boxes[i].innerHTML = studentArrays[round.value-1][i]
-    boxes[i].classList.remove = ('hideme')
+    boxes[i].classList.remove('hideme')
   }
   for (let i = numberStudents.value; i < 50; i++) {
     boxes[i].classList.add('hideme')
   }
+
+  if (round.value === "1" | round.value === "6" | round.value==="11" | round.value==="16") {
+    display.classList.add('round1')
+  }
+  if (round.value === "2" | round.value === "7" | round.value==="12" | round.value==="17") {
+    display.classList.add('round2')
+  }
+  sideBar.innerHTML = `ROUND ${round.value}`
 })
 
 // //   form.classList.add('hideme')  -- use this as a way to shift content of the page.
 // //    could add a varname.classList.remove('hideme') to whatever was in background
-
 
 const box1 = document.querySelector('#box1')
 const box2 = document.querySelector('#box2')
@@ -137,6 +137,6 @@ const box49 = document.querySelector('#box49')
 const box50 = document.querySelector('#box50')
 const boxes = [box1, box2, box3, box4, box5, 
   box6, box7, box8, box9, box10,
-box11, box12, box13, box14, box15, box16, box17, box18, box19, box20, box21, box22, box23, box24,
-box25, box26, box27, box28, box29, box30, box31, box32, box33, box34, box35, box36, box37, box38,
-box39, box40, box41, box42, box43, box44, box45, box46, box47, box48, box49, box50]
+  box11, box12, box13, box14, box15, box16, box17, box18, box19, box20, box21, box22, box23, box24,
+  box25, box26, box27, box28, box29, box30, box31, box32, box33, box34, box35, box36, box37, box38,
+  box39, box40, box41, box42, box43, box44, box45, box46, box47, box48, box49, box50]

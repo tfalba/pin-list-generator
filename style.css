@@ -1,3 +1,8 @@
+body {
+    font-family: "IBM Plex Sans", sans-serif;
+
+}
+
 
 .display-container {
     display: flex;
@@ -6,14 +11,14 @@
     align-items: stretch;
     width: 1450px;
     height: 750px;
-    margin: 5px 30px 30px 30px;
+    margin: 0px 30px 30px 80px;
     border: 2px solid black;
     padding: 20px 0 20px 0;
+    background-color:#55cfb626;
 }
 .field {
     display: flex;
-    flex-basis: 300px;
-    margin: 3px;
+    margin: 10px;
 }
 .col {
     display: flex;
@@ -26,7 +31,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    font-size: 1.2em;
+    font-size: 1em;
     color: black;
     font-family: serif;
     font-family: "IBM Plex Sans", sans-serif;
@@ -38,6 +43,7 @@
     flex-shrink: 1;
     padding: 3px;
     margin-bottom: 2px;
+    border: solid 1px  #029879;
  }
  
 #box1, #box2, #box5, #box6,
@@ -47,7 +53,8 @@
 #box33, #box34, #box37, #box38,
 #box41, #box42, #box45, #box46,
 #box49, #box50 {
-    background-color:darkgray;
+    background-color:#55cfb626;
+    color: #032c23;
 
 }
 
@@ -57,16 +64,31 @@
 #box27, #box28, #box31, #box32,
 #box35, #box36, #box39, #box40,
 #box43, #box44, #box47, #box48 {
-    background-color: lightgray;
+    background-color: #029879e8;
+    color: white;
 }
 
+button {
+    background-color: #029879;
+    color: white;
+    padding: 2px;
+    font-size: 15px;
+    margin-top: 9px; 
+}
 #side-bar {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    flex-direction: row;
+    width: 1450px;
+    justify-content: center;
     font-size: 2rem;
-    padding-left: 40px;
-    padding-top: 40px;
+    margin-top: 30px;
+    margin-left: 80px;
+    padding-bottom: 8px;
+    border: solid 2px black;
+    background-color: lightslategray;
+    background-color: #029879;
+    padding-top: 15px;
+    color: white;
 }
 
 /* 
@@ -76,17 +98,44 @@
 
 #total {
     background-color: violet;
-    margin: 20px;
-    padding: 5px;
+    /* margin: 20px;
+    padding: 5px; */
 }
 #form {
     background-color: pink;
+    background-color:#55cfb626;
     display: flex;
-    flex-basis: 800px;
-    margin: 20px;
     padding: 5px;
+    color: #046652;
+    justify-content: center;
 }
 
 .hideme {
     display: none;
 }
+
+label {
+    color: #046652;
+    font-size: 20px;
+    padding-right: 10px;
+}
+/* 
+.round1 {
+    background-color: orange;
+}
+
+.round2 {
+    background-color: blue;
+}
+
+.round3 {
+    background-color: red;
+}
+
+.round4 {
+    background-color: yellow;
+}
+
+.round5 {
+    background-color: teal;
+} */
