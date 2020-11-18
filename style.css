@@ -4,11 +4,16 @@
     flex-direction: row;
     justify-content: center;
     align-items: stretch;
-    width: 1270px;
-    height: 720px;
-    margin: 30px;
+    width: 1450px;
+    height: 750px;
+    margin: 5px 30px 30px 30px;
     border: 2px solid black;
-    padding: 40px 0 40px 0;
+    padding: 20px 0 20px 0;
+}
+.field {
+    display: flex;
+    flex-basis: 300px;
+    margin: 3px;
 }
 .col {
     display: flex;
@@ -22,61 +27,64 @@
     flex-direction: column;
     flex-wrap: wrap;
     font-size: 1.2em;
-    color: white;
+    color: black;
     font-family: serif;
+    font-family: "IBM Plex Sans", sans-serif;
     align-items: center;
     justify-content: space-around;
-    margin: 2px;
     flex-basis: 15px;
     height: 100%;
     flex-grow: 1;
     flex-shrink: 1;
+    padding: 3px;
+    margin-bottom: 2px;
  }
  
-#box1, #box2, #box-8b, 
-#box-15b, #box-22b, #box-8a, 
-#box-15a, #box-22a {
-    background-color: green;
-}
-#box-2a, #box-2b, #box-9a, #box-9b,
-#box-16a, #box-16b, #box-23a, #box-23b {
-    background-color: yellowgreen;
-}
-#box-3a, #box-3b,
-#box-10a, #box-10b,
-#box-17a, #box-17b,
-#box47, #box48 {
-    background-color: red;
+#box1, #box2, #box5, #box6,
+#box9, #box10, #box13, #box14,
+#box17, #box18, #box21, #box22,
+#box25, #box26, #box29, #box30,
+#box33, #box34, #box37, #box38,
+#box41, #box42, #box45, #box46,
+#box49, #box50 {
+    background-color:darkgray;
+
 }
 
-#box-4a, #box-4b,
-#box-11a, #box-11b,
-#box-18a, #box-18b,
+#box3, #box4, #box7, #box8, 
+#box11, #box12, #box15, #box16,
+#box19, #box20, #box23, #box24,
+#box27, #box28, #box31, #box32,
+#box35, #box36, #box39, #box40,
+#box43, #box44, #box47, #box48 {
+    background-color: lightgray;
+}
+
+#side-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 2rem;
+    padding-left: 40px;
+    padding-top: 40px;
+}
+
+/* 
 #box49, #box50 {
-    background-color: blue;
-}
-#box-5a, #box-5b,
-#box-12a, #box-12b,
-#box-19a, #box-19b {
-    background-color: teal;
     display: none;
-}
-#box-6a, #box-6b,
-#box-13a, #box-13b,
-#box-20a, #box-20b {
-    background-color: orange;
-}
-#box-7a, #box-7b,
-#box-14a, #box-14b,
-#box-21a, #box-21b {
-    background-color: fuchsia;
-    display: none;
-}
+} */
+
 #total {
     background-color: violet;
+    margin: 20px;
+    padding: 5px;
 }
 #form {
     background-color: pink;
+    display: flex;
+    flex-basis: 800px;
+    margin: 20px;
+    padding: 5px;
 }
 
 .hideme {
