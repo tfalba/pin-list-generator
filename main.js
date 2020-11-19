@@ -8,7 +8,7 @@ const sideBar = document.querySelector('#side-bar')
 form.addEventListener('submit', function (event) {
   event.preventDefault()
 
-  let studentArrayStart = []
+  let finalStudents = []
   const studentArray1 = []
   let studentArray2 = []
   let studentArray3 = []
@@ -41,19 +41,33 @@ form.addEventListener('submit', function (event) {
     studentArray8, studentArray9, studentArray10, studentArray11, studentArray12, studentArray13, studentArray14, studentArray15,
     studentArray16, studentArray17, studentArray18, studentArray19, studentArray20, studentArray21, studentArray22, studentArray23,
     studentArray24, studentArray25, studentArray26, studentArray27, studentArray28]
-
+// change first array to finalStudents
   for (let i = 1; i <= (numberStudents.value); i++) {
     studentArray1.push(i)
   }
 
-  const students = parseInt(numberStudents.value, 10)
-  let totalStudents = 0
-  if (students % 2 === 0) {
-    totalStudents = students
-  } else {
-    totalStudents = students + 1
-    studentArray1.push(50)
-  }
+/* --------------------------------- Do this section after get new total of students -------------------------------- */
+
+  // const students = parseInt(numberStudents.value, 10)
+  // let totalStudents = 0
+  // if (students % 2 === 0) {
+  //   totalStudents = students
+  // } else {
+  //   totalStudents = students + 1
+  //   studentArray1.push(50)
+  // }
+//there's a bug from the new code...
+/* -------- just need to create array from form input -- look for how to turn string expression into an array ------- */
+
+  let finalStudents = studentArray1
+  // loop over this for the length of the array that contains dropped students
+  // for (let i=0; i<=dropStudents.length; i++) {
+  // function isNotDrop(value) {
+  //   return value |== dropStudents[i] //how do I do not equal?
+  // }
+  //   let finalStudents = finalStudents.filter(isNotDrop)
+  // }
+//change out references to studentArray1 to finalStudents
 
   const shifter = totalStudents/2
   for (let i = 1; i < studentArrays.length; i++) {
