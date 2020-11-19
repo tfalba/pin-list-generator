@@ -31,7 +31,7 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    font-size: 1em;
+    font-size: 15px;
     color: black;
     font-family: serif;
     font-family: "IBM Plex Sans", sans-serif;
