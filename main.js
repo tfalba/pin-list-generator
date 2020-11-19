@@ -4,12 +4,13 @@ const round = document.querySelector('#round')
 const form = document.querySelector('#form')
 const display = document.querySelector('#display')
 const sideBar = document.querySelector('#side-bar')
+const dropStudents = document.querySelector('#drop-students')
 
 form.addEventListener('submit', function (event) {
   event.preventDefault()
 
-  let finalStudents = []
-  const studentArray1 = []
+  let initialStudents = []
+  let studentArray1 = []
   let studentArray2 = []
   let studentArray3 = []
   let studentArray4 = []
@@ -37,37 +38,51 @@ form.addEventListener('submit', function (event) {
   let studentArray26 = []
   let studentArray27 = []
   let studentArray28 = []
-  let studentArrays = [studentArray1, studentArray2, studentArray3, studentArray4, studentArray5, studentArray6, studentArray7,
-    studentArray8, studentArray9, studentArray10, studentArray11, studentArray12, studentArray13, studentArray14, studentArray15,
-    studentArray16, studentArray17, studentArray18, studentArray19, studentArray20, studentArray21, studentArray22, studentArray23,
-    studentArray24, studentArray25, studentArray26, studentArray27, studentArray28]
-// change first array to finalStudents
+  // change first array to finalStudents
+
+  /* --------------------------------- Do this section after get new total of students -------------------------------- */
+
+
+
   for (let i = 1; i <= (numberStudents.value); i++) {
     studentArray1.push(i)
   }
 
-/* --------------------------------- Do this section after get new total of students -------------------------------- */
+  let studentArrays = [studentArray1, studentArray2, studentArray3, studentArray4, studentArray5, studentArray6, studentArray7,
+    studentArray8, studentArray9, studentArray10, studentArray11, studentArray12, studentArray13, studentArray14, studentArray15,
+    studentArray16, studentArray17, studentArray18, studentArray19, studentArray20, studentArray21, studentArray22, studentArray23,
+    studentArray24, studentArray25, studentArray26, studentArray27, studentArray28]
 
-  // const students = parseInt(numberStudents.value, 10)
-  // let totalStudents = 0
-  // if (students % 2 === 0) {
-  //   totalStudents = students
-  // } else {
-  //   totalStudents = students + 1
-  //   studentArray1.push(50)
-  // }
-//there's a bug from the new code...
-/* -------- just need to create array from form input -- look for how to turn string expression into an array ------- */
+  /* -------- just need to create array from form input -- look for how to turn string expression into an array ------- */
+  // let totalStudents = numberStudents.value
 
+  let dropStudentsArray = dropStudents.value.split(', ').map(x=>+x)
   let finalStudents = studentArray1
   // loop over this for the length of the array that contains dropped students
-  // for (let i=0; i<=dropStudents.length; i++) {
-  // function isNotDrop(value) {
-  //   return value |== dropStudents[i] //how do I do not equal?
-  // }
-  //   let finalStudents = finalStudents.filter(isNotDrop)
-  // }
-//change out references to studentArray1 to finalStudents
+  for (let i=0; i<=dropStudentsArray.length; i++) {
+    function isNotDrop(value) {
+      return value !== dropStudentsArray[i] 
+    }
+    finalStudents = finalStudents.filter(isNotDrop)
+  }
+
+  studentArray1 = finalStudents
+  
+  let totalStudents = studentArray1.length
+
+  const students = studentArray1.length
+  totalStudents = 0
+  if (students % 2 === 0) {
+    totalStudents = students
+  } else {
+    totalStudents = students + 1
+    studentArray1.push(50)
+  }
+  studentArrays[0] = studentArray1
+  // debugger
+
+  // set totalStudents = finalStudents.length
+  //change out references to studentArray1 to finalStudents
 
   const shifter = totalStudents/2
   for (let i = 1; i < studentArrays.length; i++) {
