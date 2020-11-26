@@ -1,4 +1,7 @@
-const totalField = document.querySelector('#total')
+// Problem is something to do with holding 1 fixed at
+// A1 instead of B1 -- also doesn't work in excel sheet
+// Rewrite code so it does it how spreadsheet was before.
+
 const numberStudents = document.querySelector('#total-students')
 const round = document.querySelector('#round')
 const form = document.querySelector('#form')
@@ -42,8 +45,6 @@ form.addEventListener('submit', function (event) {
 
   /* --------------------------------- Do this section after get new total of students -------------------------------- */
 
-
-
   for (let i = 1; i <= (numberStudents.value); i++) {
     studentArray1.push(i)
   }
@@ -56,18 +57,18 @@ form.addEventListener('submit', function (event) {
   /* -------- just need to create array from form input -- look for how to turn string expression into an array ------- */
   // let totalStudents = numberStudents.value
 
-  let dropStudentsArray = dropStudents.value.split(', ').map(x=>+x)
+  const dropStudentsArray = dropStudents.value.split(', ').map(x => +x)
   let finalStudents = studentArray1
   // loop over this for the length of the array that contains dropped students
-  for (let i=0; i<=dropStudentsArray.length; i++) {
-    function isNotDrop(value) {
-      return value !== dropStudentsArray[i] 
+  for (let i = 0; i <= dropStudentsArray.length; i++) {
+    function isNotDrop (value) {
+      return value !== dropStudentsArray[i]
     }
     finalStudents = finalStudents.filter(isNotDrop)
   }
 
   studentArray1 = finalStudents
-  
+
   let totalStudents = studentArray1.length
 
   const students = studentArray1.length
@@ -84,16 +85,16 @@ form.addEventListener('submit', function (event) {
   // set totalStudents = finalStudents.length
   //change out references to studentArray1 to finalStudents
 
-  const shifter = totalStudents/2
+  const shifter = totalStudents / 2
   for (let i = 1; i < studentArrays.length; i++) {
     // studentArrays[i].push(studentArrays[i - 1][studentArrays[i - 1].length - 1])
     studentArrays[i].push(studentArrays[0][0])
     for (let j = 1; j < (totalStudents); j++) {
-      if (j<shifter) {
-        studentArrays[i].push(studentArrays[i - 1][j+shifter])
+      if (j < shifter) {
+        studentArrays[i].push(studentArrays[i - 1][j + shifter])
       }
       else {
-        studentArrays[i].push(studentArrays[i-1][j-shifter+1])
+        studentArrays[i].push(studentArrays[i - 1][j - shifter + 1])
       }
 
       // console.log(studentArrays)
@@ -103,21 +104,37 @@ form.addEventListener('submit', function (event) {
     }
   }
 
-  for (let i = 0; i < totalStudents; i++) {
-    boxes[i].innerHTML = studentArrays[round.value-1][i]
+  for (let i = 0; i < totalStudents / 2; i++) {
+    boxes[i].innerHTML = studentArrays[round.value - 1][i]
     boxes[i].classList.remove('hideme')
   }
-  for (let i = totalStudents; i < 50; i++) {
+
+  for (let i = shifter; i < 50 - shifter; i++) {
     boxes[i].classList.add('hideme')
   }
 
-  if (round.value === '1' | round.value === '6' | round.value==='11' | round.value==='16') {
+  for (let i = 50 - shifter; i < 50; i++) {
+    boxes[i].innerHTML = studentArrays[round.value - 1][i - (50 - totalStudents)]
+    boxes[i].classList.remove('hideme')
+  }
+
+  // change above to go to shifter -- from shifter to 25 set to hideme
+  // then hide from 26 for (50-shifter/2)
+  // close to above but see post it note.
+  // need to have two nested loops each counting by 2.
+
+  // for (let i = shifter; i < 50 - shifter - 1; i++) {
+  //   boxes[i].classList.add('hideme')
+  // }
+
+  if (round.value === '1' | round.value === '6' | round.value === '11' | round.value === '16') {
     display.classList.add('round1')
   }
-  if (round.value === '2' | round.value === '7' | round.value==='12' | round.value==='17') {
+  if (round.value === '2' | round.value === '7' | round.value === '12' | round.value === '17') {
     display.classList.add('round2')
   }
   sideBar.innerHTML = `ROUND ${round.value}`
+  console.log(studentArrays[3])
 })
 
 // //   form.classList.add('hideme')  -- use this as a way to shift content of the page.
