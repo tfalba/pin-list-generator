@@ -1,5 +1,5 @@
 body {
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: futura;
 
 }
 
@@ -14,7 +14,7 @@ body {
     margin: 0px 30px 30px 80px;
     border: 2px solid black;
     padding: 20px 0 20px 0;
-    background-color:#55cfb626;
+    background-color:#ffffff;
 }
 .field {
     display: flex;
@@ -35,37 +35,46 @@ body {
     color: black;
     font-family: serif;
     font-family: "IBM Plex Sans", sans-serif;
+    font-family: futura;
     align-items: center;
     justify-content: space-around;
     flex-basis: 15px;
     height: 100%;
-    flex-grow: 1;
+    flex-grow: 2;
     flex-shrink: 1;
     padding: 3px;
     margin-bottom: 2px;
     border: solid 1px  #029879;
+    border: solid 1px black;
+ }
+
+ .box-header {
+     color: white;
+     background-color: #029879;
+     flex-grow:1;
  }
  
 #box1, #box3, #box5, #box7,
 #box9, #box11, #box13, #box15,
-#box17, #box19, #box21, #box23,
-#box25, #box26, #box28, #box30,
+#box17, #box19, #box21, #box24,
+#box26, #box28, #box30,
 #box32, #box34, #box36, #box38,
 #box40, #box42, #box44, #box46,
 #box48, #box50 {
     background-color:#55cfb626;
+    background-color: white;
     color: #032c23;
 
 }
 
 #box2, #box4, #box6, #box8, 
 #box10, #box12, #box14, #box16,
-#box18, #box20, #box22, #box24,
+#box18, #box20, #box22, #box23, #box25,
 #box27, #box29, #box31, #box33,
 #box35, #box37, #box39, #box41,
 #box43, #box45, #box47, #box49 {
     background-color: #029879e8;
-    color: white;
+    background-color: rgb(216, 212, 212);
 }
 
 button {
@@ -75,7 +84,7 @@ button {
     font-size: 15px;
     margin-top: 9px; 
 }
-#side-bar {
+.side-bar {
     display: flex;
     flex-direction: row;
     width: 1600px;
@@ -119,23 +128,23 @@ label {
     font-size: 20px;
     padding-right: 10px;
 }
-/* 
+
 .round1 {
-    background-color: orange;
+    background-color: #673ab7
 }
 
 .round2 {
-    background-color: blue;
+    background-color:#0780e1;
 }
 
 .round3 {
-    background-color: red;
+    background-color: #d0352a;
 }
 
 .round4 {
-    background-color: yellow;
+    background-color:#ff7900;
 }
 
 .round5 {
-    background-color: teal;
-} */
+    background-color: #009688;
+}
