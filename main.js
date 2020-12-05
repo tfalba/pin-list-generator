@@ -114,27 +114,93 @@ form.addEventListener('submit', function (event) {
   }
 
   if (round.value === '1' | round.value === '6' | round.value === '11' | round.value === '16' | round.value === '21' | round.value === '26') {
+    sideBar.classList.remove('round2')
+    boxA.classList.remove('round2')
+    boxB.classList.remove('round2')
+    sideBar.classList.remove('round3')
+    boxA.classList.remove('round3')
+    boxB.classList.remove('round3')
+    sideBar.classList.remove('round4')
+    boxA.classList.remove('round4')
+    boxB.classList.remove('round4')
+    sideBar.classList.remove('round5')
+    boxA.classList.remove('round5')
+    boxB.classList.remove('round5')
+
     sideBar.classList.add('round1')
     boxA.classList.add('round1')
     boxB.classList.add('round1')
   }
   if (round.value === '2' | round.value === '7' | round.value === '12' | round.value === '17' | round.value === '22' | round.value === '27') {
+    sideBar.classList.remove('round1')
+    boxA.classList.remove('round1')
+    boxB.classList.remove('round1')
+    sideBar.classList.remove('round3')
+    boxA.classList.remove('round3')
+    boxB.classList.remove('round3')
+    sideBar.classList.remove('round4')
+    boxA.classList.remove('round4')
+    boxB.classList.remove('round4')
+    sideBar.classList.remove('round5')
+    boxA.classList.remove('round5')
+    boxB.classList.remove('round5')
+
     sideBar.classList.add('round2')
     boxA.classList.add('round2')
     boxB.classList.add('round2')
   }
 
   if (round.value === '3' | round.value === '8' | round.value === '13' | round.value === '18' | round.value === '23' | round.value === '28') {
+    sideBar.classList.remove('round2')
+    boxA.classList.remove('round2')
+    boxB.classList.remove('round2')
+    sideBar.classList.remove('round1')
+    boxA.classList.remove('round1')
+    boxB.classList.remove('round1')
+    sideBar.classList.remove('round4')
+    boxA.classList.remove('round4')
+    boxB.classList.remove('round4')
+    sideBar.classList.remove('round5')
+    boxA.classList.remove('round5')
+    boxB.classList.remove('round5')
+
     sideBar.classList.add('round3')
     boxA.classList.add('round3')
     boxB.classList.add('round3')
   }
   if (round.value === '4' | round.value === '9' | round.value === '14' | round.value === '19' | round.value === '24') {
+    sideBar.classList.remove('round2')
+    boxA.classList.remove('round2')
+    boxB.classList.remove('round2')
+    sideBar.classList.remove('round3')
+    boxA.classList.remove('round3')
+    boxB.classList.remove('round3')
+    sideBar.classList.remove('round1')
+    boxA.classList.remove('round1')
+    boxB.classList.remove('round1')
+    sideBar.classList.remove('round5')
+    boxA.classList.remove('round5')
+    boxB.classList.remove('round5')
+
+    
     sideBar.classList.add('round4')
     boxA.classList.add('round4')
     boxB.classList.add('round4')
   }
   if (round.value === '5' | round.value === '10' | round.value === '15' | round.value === '20' | round.value === '25') {
+    sideBar.classList.remove('round2')
+    boxA.classList.remove('round2')
+    boxB.classList.remove('round2')
+    sideBar.classList.remove('round3')
+    boxA.classList.remove('round3')
+    boxB.classList.remove('round3')
+    sideBar.classList.remove('round4')
+    boxA.classList.remove('round4')
+    boxB.classList.remove('round4')
+    sideBar.classList.remove('round1')
+    boxA.classList.remove('round1')
+    boxB.classList.remove('round1')
+
     sideBar.classList.add('round5')
     boxA.classList.add('round5')
     boxB.classList.add('round5')
