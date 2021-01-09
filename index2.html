@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start of Concept for Pin List Generator</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="main2.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <form id="form">
+            <div class="field" id="num-stud">
+                <label for="number"># of Students Assigned a Number (From Start)</label>
+                <input id="total-students" type="number" required>
+            </div>
+            <div class="field" id="num-stud">
+                <label for="number">Students to skip</label>
+                <input id="drop-students" type="text" placeholder="e.g. as 3, 7, 22">
+            </div>
+            <div class="field" id="num-stud">
+                <label for="number">Round</label>
+                <input id="round" type="number" required>
+            </div>
+            <div class="field" id="voting">
+                <label for="lifeboat">Lifeboat or Giver/Taker</label>
+                <input id="lifeboat" type="checkbox">
+            </div>
+            <div class="input-field">
+                <button id="submit-button" type="submit">Enter Round</button>
+            </div>
+        </form>
+    </div>
+    <div id="total"></div>
+    <div class="side side-bar">ROUND</div>
+    <div class="display-container" id="display">
+        <div class="col" id="col-a">
+            <div class="box box-header" id="boxa">A</div>
+            <div class="box" id="box1">1</div>
+            <div class="box" id="box2">2</div>
+            <div class="box" id="box3">3</div>
+            <div class="box" id="box4">4</div>
+            <div class="box" id="box5">5</div>
+            <div class="box" id="box6">6</div>
+            <div class="box" id="box7">7</div>
+            <div class="box" id="box8">8</div>
+            <div class="box" id="box9">9</div>
+            <div class="box" id="box10">10</div>
+            <div class="box" id="box11">11</div>
+            <div class="box" id="box12">12</div>
+            <div class="box" id="box13">13</div>
+            <div class="box" id="box14">14</div>
+            <div class="box" id="box15">15</div>
+            <div class="box" id="box16">16</div>
+            <div class="box" id="box17">17</div>
+            <div class="box" id="box18">18</div>
+            <div class="box" id="box19">19</div>
+            <div class="box" id="box20">20</div>
+            <div class="box" id="box60">60</div>
+            <div class="box" id="box59">59</div>
+            <div class="box" id="box58">58</div>
+            <div class="box" id="box57">57</div>
+            <div class="box" id="box56">56</div>
+            <div class="box" id="box55">55</div>
+            <div class="box" id="box54">54</div>
+            <div class="box" id="box53">53</div>
+            <div class="box" id="box52">52</div>
+            <div class="box" id="box51">51</div>
+            <div class="box" id="box50">50</div>
+            <div class="box" id="box49">49</div>
+            <div class="box" id="box48">48</div>
+            <div class="box" id="box47">47</div>
+            <div class="box" id="box46">46</div>
+            <div class="box" id="box45">45</div>
+            <div class="box" id="box44">44</div>
+            <div class="box" id="box43">43</div>
+            <div class="box" id="box42">42</div>
+            <div class="box" id="box41">41</div>
+        </div>
+
+        <div class="col" id="col-b">
+            <div class="box box-header" id="boxb">B</div>
+            <div class="box" id="box80">80</div>
+            <div class="box" id="box79">79</div>
+            <div class="box" id="box78">78</div>
+            <div class="box" id="box77">77</div>
+            <div class="box" id="box76">76</div>
+            <div class="box" id="box75">75</div>
+            <div class="box" id="box74">74</div>
+            <div class="box" id="box73">73</div>
+            <div class="box" id="box72">72</div>
+            <div class="box" id="box71">71</div>
+            <div class="box" id="box70">70</div>
+            <div class="box" id="box69">69</div>
+            <div class="box" id="box68">68</div>
+            <div class="box" id="box67">67</div>
+            <div class="box" id="box66">66</div>
+            <div class="box" id="box65">65</div>
+            <div class="box" id="box64">64</div>
+            <div class="box" id="box63">63</div>
+            <div class="box" id="box62">62</div>
+            <div class="box" id="box61">61</div>
+
+            <div class="box" id="box21">21</div>
+            <div class="box" id="box22">22</div>
+            <div class="box" id="box23">23</div>
+            <div class="box" id="box24">24</div>
+            <div class="box" id="box25">25</div>
+            <div class="box" id="box26">26</div>
+            <div class="box" id="box27">27</div>
+            <div class="box" id="box28">28</div>
+            <div class="box" id="box29">29</div>
+            <div class="box" id="box30">30</div>
+            <div class="box" id="box31">31</div>
+            <div class="box" id="box32">32</div>
+            <div class="box" id="box33">33</div>
+            <div class="box" id="box34">34</div>
+            <div class="box" id="box35">35</div>
+            <div class="box" id="box36">36</div>
+            <div class="box" id="box37">37</div>
+            <div class="box" id="box38">38</div>
+            <div class="box" id="box39">39</div>
+            <div class="box" id="box40">40</div>
+        </div>
+        <div class="col spacer"></div>
+        <div class="col spacer"></div>
+        <div class="col-rev" id="col-c">
+            <div class="box" id="box2_1">1</div>
+            <div class="box" id="box2_2">2</div>
+            <div class="box" id="box2_3">3</div>
+            <div class="box" id="box2_4">4</div>
+            <div class="box" id="box2_5">5</div>
+            <div class="box" id="box2_6">6</div>
+            <div class="box" id="box2_7">7</div>
+            <div class="box" id="box2_8">8</div>
+            <div class="box" id="box2_9">9</div>
+            <div class="box" id="box2_10">10</div>
+            <div class="box" id="box2_11">11</div>
+            <div class="box" id="box2_12">12</div>
+            <div class="box" id="box2_13">13</div>
+            <div class="box" id="box2_14">14</div>
+            <div class="box" id="box2_15">15</div>
+            <div class="box" id="box2_16">16</div>
+            <div class="box" id="box2_17">17</div>
+            <div class="box" id="box2_18">18</div>
+            <div class="box" id="box2_19">19</div>
+            <div class="box" id="box2_20">20</div>
+
+            <div class="box" id="box2_60">60</div>
+            <div class="box" id="box2_59">59</div>
+            <div class="box" id="box2_58">58</div>
+            <div class="box" id="box2_57">57</div>
+            <div class="box" id="box2_56">56</div>
+            <div class="box" id="box2_55">55</div>
+            <div class="box" id="box2_54">54</div>
+            <div class="box" id="box2_53">53</div>
+            <div class="box" id="box2_52">52</div>
+            <div class="box" id="box2_51">51</div>
+            <div class="box" id="box2_50">50</div>
+            <div class="box" id="box2_49">49</div>
+            <div class="box" id="box2_48">48</div>
+            <div class="box" id="box2_47">47</div>
+            <div class="box" id="box2_46">46</div>
+            <div class="box" id="box2_45">45</div>
+            <div class="box" id="box2_44">44</div>
+            <div class="box" id="box2_43">43</div>
+            <div class="box" id="box2_42">42</div>
+            <div class="box" id="box2_41">41</div>
+            <div class="box box-header" id="boxc">C</div>
+        </div>
+
+        <div class="col-rev" id="col-d">
+            <div class="box" id="box2_80">80</div>
+            <div class="box" id="box2_79">79</div>
+            <div class="box" id="box2_78">78</div>
+            <div class="box" id="box2_77">77</div>
+            <div class="box" id="box2_76">76</div>
+            <div class="box" id="box2_75">75</div>
+            <div class="box" id="box2_74">74</div>
+            <div class="box" id="box2_73">73</div>
+            <div class="box" id="box2_72">72</div>
+            <div class="box" id="box2_71">71</div>
+            <div class="box" id="box2_70">70</div>
+            <div class="box" id="box2_69">69</div>
+            <div class="box" id="box2_68">68</div>
+            <div class="box" id="box2_67">67</div>
+            <div class="box" id="box2_66">66</div>
+            <div class="box" id="box2_65">65</div>
+            <div class="box" id="box2_64">64</div>
+            <div class="box" id="box2_63">63</div>
+            <div class="box" id="box2_62">62</div>
+            <div class="box" id="box2_61">61</div>
+
+            <div class="box" id="box2_21">21</div>
+            <div class="box" id="box2_22">22</div>
+            <div class="box" id="box2_23">23</div>
+            <div class="box" id="box2_24">24</div>
+            <div class="box" id="box2_25">25</div>
+            <div class="box" id="box2_26">26</div>
+            <div class="box" id="box2_27">27</div>
+            <div class="box" id="box2_28">28</div>
+            <div class="box" id="box2_29">29</div>
+            <div class="box" id="box2_30">30</div>
+            <div class="box" id="box2_31">31</div>
+            <div class="box" id="box2_32">32</div>
+            <div class="box" id="box2_33">33</div>
+            <div class="box" id="box2_34">34</div>
+            <div class="box" id="box2_35">35</div>
+            <div class="box" id="box2_36">36</div>
+            <div class="box" id="box2_37">37</div>
+            <div class="box" id="box2_38">38</div>
+            <div class="box" id="box2_39">39</div>
+            <div class="box" id="box2_40">40</div>
+            <div class="box box-header" id="boxd">D</div>
+        </div>
+    </div>
+
+
+</body>
+</html>

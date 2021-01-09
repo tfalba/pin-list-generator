@@ -1,0 +1,169 @@
+body {
+  font-family: futura;
+
+}
+
+.container {
+  display:flex;
+  margin-left: 50px;
+}
+
+.display-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  width: 1700px;
+  /* height: 800px; */
+  margin: 0px 30px 20px 50px;
+  border: 2px solid black;
+  padding: 5px 0 40px 0;
+  background-color:#ffffff;
+}
+.field {
+  display: flex;
+  margin: 10px;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 150px;
+  flex-wrap: wrap;
+}
+
+.col-rev {
+  display:flex;
+  flex-direction: column-reverse;
+  flex-basis: 150px;
+  flex-wrap:wrap;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 23px;
+  font-weight: 500;
+  color: black;
+  font-family: serif;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-family: futura;
+  align-items: center;
+  justify-content: space-around;
+  flex-basis: 38px;
+  height: 100%;
+  flex-grow: 2;
+  flex-shrink: 1;
+  border: solid 1px  #029879;
+  border: solid 1px black;
+}
+
+.box-header {
+  color: white;
+  background-color: #029879;
+  flex-grow:1;
+}
+
+.bigger {
+  font-size: 31px;
+}
+#box1, #box2, #box3, #box4, #box5, #box6, #box7, #box8, #box9, #box10
+#box11, #box12, #box13, #box14, #box15, #box16, #box17, #box18, #box19, #box20,
+#box21, #box22, #box23, #box24, #box25, #box26, #box27, #box28, #box29, #box30,
+#box31, #box32, #box33, #box34, #box35, #box36, #box37, #box38, #box39, #box40,
+#box41, #box42, #box43, #box44, #box45, #box46, #box47, #box48, #box49, #box50, 
+#box51, #box52, #box53, #box54, #box55, #box56, #box57, #box58, #box59, #box60, 
+#box61, #box62, #box63, #box64, #box65, #box66, #box67, #box68, #box69, #box70, 
+#box71, #box72, #box73, #box74, #box75, #box76, #box77, #box78, #box79, #box80,
+#box2_1, #box2_2, #box2_3, #box2_4, #box2_5, #box2_6, #box2_7, #box2_8, #box2_9, #box2_10
+#box2_11, #box2_12, #box2_13, #box2_14, #box2_15, #box2_16, #box2_17, #box2_18, #box2_19, #box2_20,
+#box2_21, #box2_22, #box2_23, #box2_24, #box2_25, #box2_26, #box2_27, #box2_28, #box2_29, #box2_30,
+#box2_31, #box2_32, #box2_33, #box2_34, #box2_35, #box2_36, #box2_37, #box2_38, #box2_39, #box2_40,
+#box2_41, #box2_42, #box2_43, #box2_44, #box2_45, #box2_46, #box2_47, #box2_48, #box2_49, #box2_50, 
+#box2_51, #box2_52, #box2_53, #box2_54, #box2_55, #box2_56, #box2_57, #box2_58, #box2_59, #box2_60, 
+#box2_61, #box2_62, #box2_63, #box2_64, #box2_65, #box2_66, #box2_67, #box2_68, #box2_69, #box2_70, 
+#box2_71, #box2_72, #box2_73, #box2_74, #box2_75, #box2_76, #box2_77, #box2_78, #box2_79, #box2_80
+ {
+  background-color:#55cfb626;
+  background-color: white;
+  color: #032c23;
+
+}
+/* 
+#box2, #box4, #box6, #box8, 
+#box10, #box12, #box14, #box16,
+#box18, #box20, #box22, #box23, #box25,
+#box27, #box29, #box31, #box33,
+#box35, #box37, #box39, #box41,
+#box43, #box45, #box47, #box49 {
+  background-color: #029879e8;
+  background-color: rgb(216, 212, 212);
+} */
+
+button {
+  background-color: #029879;
+  color: white;
+  padding: 2px;
+  font-size: 20px;
+  margin-top: 9px; 
+  margin-left: 20px;
+}
+.side-bar {
+  display: flex;
+  flex-direction: row;
+  width: 1700px;
+  justify-content: center;
+  font-size: 2rem;
+  margin-top: 50px;
+  margin-left: 50px;
+  padding-bottom: 8px;
+  border: solid 2px black;
+  background-color: lightslategray;
+  background-color: #029879;
+  padding-top: 15px;
+  color: white;
+}
+
+#total {
+  background-color: violet;
+  /* margin: 20px;
+  padding: 5px; */
+}
+#form {
+  background-color: pink;
+  background-color:#55cfb626;
+  display: flex;
+  padding: 5px;
+  color: #046652;
+  justify-content: center;
+}
+
+.hideme {
+  display: none;
+}
+
+label {
+  color: #046652;
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+.round1, .round6, .round11, .round16, .round21, .round26 {
+  background-color: #673ab7
+}
+
+.round2, .round7, .round12, .round17, .round22, .round27 {
+  background-color:#0780e1;
+}
+
+.round3, .round8, .round13, .round18, .round23, .round28 {
+  background-color: #d0352a;
+}
+
+.round4, .round9, .round14, .round19, .round24 {
+  background-color:#ff7900;
+}
+
+.round5, .round10, .round15, .round20, .round25 {
+  background-color: #009688;
+}
